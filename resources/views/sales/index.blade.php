@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Transaksi Point of Sales</h1>
+    <button><a href="{{ route('home') }}">Home</a></button>
 </body>
 </html>

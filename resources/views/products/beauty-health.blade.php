@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Daftar Produk Beauty & Health</h1>
+    <ul>
+        <li>Product 1</li>
+        <li>Product 2</li>
+        <li>Product 3</li>
+    </ul>
+    <button><a href="{{ route('home') }}">Home</a></button>
 </body>
 </html>

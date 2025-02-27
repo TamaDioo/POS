@@ -10,5 +10,6 @@
     <h1>Profil User</h1>
     <p>ID: {{ $id }}</p>
     <p>Nama: {{ $name }}</p>
+    <button><a href="{{ route('home') }}">Home</a></button>
 </body>
 </html>

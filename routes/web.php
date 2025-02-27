@@ -7,21 +7,21 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SalesController;
 
 // Route untuk Halaman Home
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Route untuk Halaman Products menggunakan Route Prefix
 Route::prefix('category')->group(function () {
-    Route::get('/food-beverage', [ProductController::class, 'foodBeverage']);
-    Route::get('/beauty-health', [ProductController::class, 'beautyHealth']);
-    Route::get('/home-care', [ProductController::class, 'homeCare']);
-    Route::get('/baby-kid', [ProductController::class, 'babyKid']);
+    Route::get('/food-beverage', [ProductController::class, 'foodBeverage'])->name('products.food-beverage');
+    Route::get('/beauty-health', [ProductController::class, 'beautyHealth'])->name('products.beauty-health');
+    Route::get('/home-care', [ProductController::class, 'homeCare'])->name('products.home-care');
+    Route::get('/baby-kid', [ProductController::class, 'babyKid'])->name('products.baby-kid');
 });
 
 // Route untuk Halaman User menggunakan Route Param 'id' dan 'name'
-Route::get('/user/{id}/name/{name}', [UserController::class, 'profile']);
+Route::get('/user/{id}/name/{name}', [UserController::class, 'profile'])->name('user.profile');
 
 // Route untuk Halaman Penjualan
-Route::get('/sales', [SalesController::class, 'index']);
+Route::get('/sales', [SalesController::class, 'index'])->name('sales');
 
 /*
 |--------------------------------------------------------------------------
