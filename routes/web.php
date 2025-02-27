@@ -34,6 +34,7 @@ Route::get('/sales', [SalesController::class, 'index']);
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route di bawah ini harus dinonaktifkan agar tidak konflik dengan route untuk halaman home
+// Route::get('/', function () {
+//     return view('welcome');
+// });
