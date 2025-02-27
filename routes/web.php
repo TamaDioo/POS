@@ -20,7 +20,7 @@ Route::prefix('category')->group(function () {
 // Route untuk Halaman User menggunakan Route Param 'id' dan 'name'
 Route::get('/user/{id}/name/{name}', [UserController::class, 'profile']);
 
-// Halaman Penjualan
+// Route untuk Halaman Penjualan
 Route::get('/sales', [SalesController::class, 'index']);
 
 /*
